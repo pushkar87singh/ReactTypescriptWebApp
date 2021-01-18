@@ -1,5 +1,5 @@
 import React from "react";
-//import useAuthContext from "../../hooks/useAuthContext";
+import useAuthContext from "../../hooks/useAuthContext";
 import { Redirect, RouteComponentProps } from "@reach/router";
 import Header from "../header";
 import Navigation from "../navigation";
