@@ -36,22 +36,22 @@ window.onerror = (err) => {
 
 ReactDOM.render(
   <ApolloProvider client={client}>
-    <ApolloHooksProvider client={client}>
-      <ThemeProvider theme={theme}>
-        <LogBoundary>
-          <LocaleContextProvider locale={currentLocale}>
-            <AuthContextProvider
-              apolloCache={client.cache}
-              currentLocale={currentLocale}
-            >
-              <StoreContextProvider>
-                <App />
-              </StoreContextProvider>
-            </AuthContextProvider>
-          </LocaleContextProvider>
-        </LogBoundary>
-      </ThemeProvider>
-    </ApolloHooksProvider>
+    {/* <ApolloHooksProvider client={client}> */}
+    <ThemeProvider theme={theme}>
+      <LogBoundary>
+        <LocaleContextProvider locale={currentLocale}>
+          <AuthContextProvider
+            apolloCache={client.cache}
+            currentLocale={currentLocale}
+          >
+            <StoreContextProvider>
+              <App />
+            </StoreContextProvider>
+          </AuthContextProvider>
+        </LocaleContextProvider>
+      </LogBoundary>
+    </ThemeProvider>
+    {/* </ApolloHooksProvider> */}
   </ApolloProvider>,
   document.getElementById("root")
 );
